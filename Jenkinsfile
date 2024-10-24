@@ -10,7 +10,7 @@ pipeline {
         stage('Clone') {
             steps {
                 timeout(time: 2, unit: 'MINUTES'){
-                    git branch: 'main', credentialsId: 'github_pat_token', url: 'https://github.com/cristhianllanque/ProyectoPruebas.git'
+                    git branch: 'main', credentialsId: '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', url: 'https://github.com/cristhianllanque/ProyectoPruebas.git'
                 }
             }
         }
