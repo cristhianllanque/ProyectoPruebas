@@ -17,14 +17,14 @@ pipeline {
         stage('Build') {
             steps {
                 timeout(time: 8, unit: 'MINUTES'){
-                    sh "mvn -DskipTests clean package -f Cris/pom.xml"
+                    sh "mvn -DskipTests clean package -f ProyectoPruebas/pom.xml"
                 }
             }
         }
         stage('Test') {
             steps {
                 timeout(time: 8, unit: 'MINUTES'){
-                    sh "mvn clean install -f Cris/pom.xml"
+                    sh "mvn clean install -f ProyectoPruebas/pom.xml"
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline {
     	    steps {
         	timeout(time: 8, unit: 'MINUTES') {
             	     withSonarQubeEnv('sonarqube') {
-                        sh "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar -Pcoverage -f Cris/pom.xml"
+                        sh "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar -Pcoverage -f ProyectoPruebas/pom.xml"
             	    }
                 }
             }
@@ -58,7 +58,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-        sh "mvn spring-boot:run -f Cris/pom.xml"
+        sh "mvn spring-boot:run -f ProyectoPruebas/pom.xml"
             }
         }
     }
