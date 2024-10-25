@@ -43,7 +43,7 @@ public class ComentarioControllerTest {
     public void testGetAllComentarios() {
         List<Comentario> listaComentarios = Arrays.asList(comentario);
 
-        
+        // Simular el comportamiento del servicio
         given(comentarioService.findAll()).willReturn(listaComentarios);
 
         // Llamar al controlador y verificar la respuesta
