@@ -33,7 +33,7 @@ public class ComentarioControllerIntegrationTest {
     public void setUp() {
         RestAssured.port = port;
         
-        // Limpiar la base de datos antes de cada prueba
+        
         comentarioRepository.deleteAll();
         
         // Crear un comentario para usar en las pruebas
