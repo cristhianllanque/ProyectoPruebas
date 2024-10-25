@@ -38,7 +38,7 @@ public class ComentarioControllerIntegrationTest {
         
         // Crear un comentario para usar en las pruebas
         comentario = new Comentario();
-        comentario.setTitulo("Pesimo Servicio");
+        comentario.setTitulo("Pesimo Servicio jil");
         comentario.setDescripcion("El servicio fue muy bueno y rápido.");
         comentario.setAutor("Usuario XYZ");
         comentario.setFechaPublicacion(new Date());
